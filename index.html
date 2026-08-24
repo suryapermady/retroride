@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Ride Brotherhood</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <h1>Retro Ride Brotherhood</h1>
+
+            <ul>
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#tentang">Tentang</a></li>
+                <li><a href="#kegiatan">Kegiatan</a></li>
+                <li><a href="#galeri">Galeri</a></li>
+                <li><a href="#anggota">Anggota</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div>
+            <h2>Selamat Datang di Retro Ride Brotherhood</h2>
+            <p>
+                Tempat berkumpul, berbagi, dan berkembang bersama.
+            </p>
+
+            <a href="#tentang" class="btn">Kenal Lebih Dekat</a>
+        </div>
+    </section>
+
+    <section id="tentang">
+        <h2>Tentang Komunitas</h2>
+
+        <p>
+            Komunitas Kita adalah wadah untuk berkumpul,
+            berbagi pengalaman, menjalin persahabatan,
+            dan melakukan kegiatan positif bersama.
+        </p>
+    </section>
+
+    <section id="kegiatan">
+        <h2>Kegiatan Komunitas</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Kopdar</h3>
+                <p>
+                    Pertemuan rutin anggota komunitas.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Bakti Sosial</h3>
+                <p>
+                    Kegiatan sosial untuk membantu masyarakat.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Touring</h3>
+                <p>
+                    Kegiatan perjalanan bersama anggota komunitas.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="galeri">
+        <h2>Galeri</h2>
+
+        <div class="gallery">
+            <img src="https://via.placeholder.com/300" alt="Kegiatan 1">
+            <img src="https://via.placeholder.com/300" alt="Kegiatan 2">
+            <img src="https://via.placeholder.com/300" alt="Kegiatan 3">
+        </div>
+    </section>
+
+    <section id="anggota">
+        <h2>Gabung Komunitas</h2>
+
+        <form id="formAnggota">
+
+            <input type="text" id="nama" placeholder="Nama Lengkap" required>
+
+            <input type="email" id="email" placeholder="Email" required>
+
+            <input type="text" id="telepon" placeholder="Nomor WhatsApp" required>
+
+            <button type="submit">
+                Daftar Sekarang
+            </button>
+
+        </form>
+    </section>
+
+    <section id="kontak">
+        <h2>Kontak</h2>
+
+        <p>DISCORD</p>
+       <a href="https://bit.ly/RRB1970" target="_blank" rel="noopener noreferrer">
+    Retro Ride Brotherhood
+    </section>
+
+    <footer>
+        <p>
+          
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Anggota Komunitas</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #111;
+            color: white;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #5865F2;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #aaa;
+            margin-bottom: 30px;
+        }
+
+        .member-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .member {
+            background: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .member:hover {
+            transform: translateY(-5px);
+            border-color: #5865F2;
+        }
+
+        .avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid #5865F2;
+        }
+
+        .member h2 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .role {
+            color: #5865F2;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .discord {
+            display: inline-block;
+            padding: 8px 15px;
+            background: #5865F2;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .discord:hover {
+            background: #4752C4;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>LIST ANGGOTA</h1>
+        <p class="subtitle">Daftar anggota Retro Ride Brotherhood</p>
+
+        <div class="member-list">
+
+            <!-- Founder -->
+            <div class="member">
+                <img src="https://i.pravatar.cc/150?img=12" 
+                     alt="Avatar Nolan" 
+                     class="avatar">
+
+                <h2>Nolan Murphy</h2>
+                <p class="role">Founder</p>
+
+                <a href="https://discord.gg/itsboss"
+                   target="_blank"
+                   class="discord">
+                    Discord
+                </a>
+            </div>
+
+            <!-- Management -->
+            <div class="member">
+                <img src="https://i.pravatar.cc/150?img=5" 
+                     alt="Avatar Shimizu" 
+                     class="avatar">
+
+                <h2>Shimizu Nikushimi</h2>
+                <p class="role">Management</p>
+
+                <a href="https://discord.gg/USERNAME"
+                   target="_blank"
+                   class="discord">
+                    Discord
+                </a>
+            </div>
+
+            <!-- Moderator -->
+            <div class="member">
+                <img src="https://i.pravatar.cc/150?img=8" 
+                     alt="Avatar Vicenzo" 
+                     class="avatar">
+
+                <h2>Vicenzo Zayendra</h2>
+                <p class="role">Moderator</p>
+
+                <a href="https://discord.gg/kuyaterbang#3961"
+                   target="_blank"
+                   class="discord">
+                    Discord
+                </a>
+            </div>
+
+            <!-- Management -->
+            <div class="member">
+                <img src="https://i.pravatar.cc/150?img=13" 
+                     alt="Avatar Dimas" 
+                     class="avatar">
+
+                <h2>Xanderz Schneider</h2>
+                <p class="role">Management</p>
+
+                <a href="https://discord.gg/USERNAME"
+                   target="_blank"
+                   class="discord">
+                    Discord
+                </a>
+            </div>
+                        <!-- Anggota 1 -->
+            <div class="member">
+                <img src="https://i.pravatar.cc/150?img=12" 
+                     alt="Avatar Andi" 
+                     class="avatar">
+
+                <h2>Richtofen Mactavish</h2>
+                <p class="role">Member</p>
+
+                <a href="https://discord.gg/itsboss"
+                   target="_blank"
+                   class="discord">
+                    Discord
+                </a>
+            </div>
+                        <!-- Anggota 2 -->
+            <div class="member">
+                <img src="https://i.pravatar.cc/150?img=12" 
+                     alt="Avatar Andi" 
+                     class="avatar">
+
+                <h2>Dion JuSvocy</h2>
+                <p class="role">Member</p>
+
+                <a href="https://discord.gg/itsboss"
+                   target="_blank"
+                   class="discord">
+                    Discord
+                </a> 
+            </div>
+                        <!-- Anggota 3 -->
+            <div class="member">
+                <img src="https://i.pravatar.cc/150?img=12" 
+                     alt="Avatar Andi" 
+                     class="avatar">
+
+                <h2>Youseff Rasmussen</h2>
+                <p class="role">Member</p>
+
+                <a href="https://discord.gg/itsboss"
+                   target="_blank"
+                   class="discord">
+                    Discord
+                </a>
+            </div>
+                        <!-- Anggota 4 -->
+            <div class="member">
+                <img src="https://i.pravatar.cc/150?img=12" 
+                     alt="Avatar Andi" 
+                     class="avatar">
+
+                <h2>Anthony Sunderland</h2>
+                <p class="role">Member</p>
+
+                <a href="https://discord.gg/itsboss"
+                   target="_blank"
+                   class="discord">
+                    Discord
+                 </a>
+                             </div>
+                        <!-- Anggota 5 -->
+            <div class="member">
+                <img src="https://i.pravatar.cc/150?img=12" 
+                     alt="Avatar Andi" 
+                     class="avatar">
+
+                <h2>Anthony Sunderland</h2>
+                <p class="role">Member</p>
+
+                <a href="https://discord.gg/itsboss"
+                   target="_blank"
+                   class="discord">
+                    Discord
+                 </a>
+            </div>
+            </div>
+                        <!-- Moderator -->
+            <div class="member">
+                <img src="https://i.pravatar.cc/150?img=12" 
+                     alt="Avatar Andi" 
+                     class="avatar">
+
+                <h2>Vicenzo Zayendra</h2>
+                <p class="role">Moderator</p>
+
+                <a href="https://discord.gg/itsboss"
+                   target="_blank"
+                   class="discord">
+                    Discord
+                </a>
+            </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
